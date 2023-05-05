@@ -1,0 +1,32 @@
+<div class="modal-header">
+  <h4 class="modal-title">Edit Task</h4>
+  <button
+    type="button"
+    class="btn btn-outline-dark rounded-circle"
+    aria-label="Close"
+    (click)="modal.dismiss('Cross click')"
+  >
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+</div>
+<div class="modal-body">
+  <form (ngSubmit)="onSubmit(task)">
+    <div class="form-group d-flex">
+      <input
+        type="text"
+        class="form-control create-new-item-input"
+        id="title"
+        [(ngModel)]="task.title"
+        name="title"
+      />
+      <button
+        type="button"
+        title="Save"
+        class="btn btn-outline-primary rounded-circle"
+        (click)="onSubmit(task)"
+      >
+        <i class="fa-solid fa-pen-to-square"></i>
+      </button>
+    </div>
+  </form>
+</div>

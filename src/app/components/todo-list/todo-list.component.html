@@ -1,0 +1,74 @@
+<div class="container">
+  <app-date [today]="today"></app-date>
+  <app-navigation
+    [selectedCategory]="selectedCategory"
+    (categorySelected)="onCategorySelected($event)"
+  ></app-navigation>
+
+  <div class="row mt-5">
+    <div class="col-12">
+      <div class="card border-0">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item border-0" *ngFor="let todo of tasks">
+            <button
+              type="button"
+              class="btn px-0 border-0"
+              (click)="changeTaskCategory(todo.id)"
+              [disabled]="todo.category === 'Completed'"
+            >
+              <i
+                *ngIf="todo.category === 'In-Progress'"
+                class="fa-regular fa-circle fs-4 text-secondary-empty-circle"
+              ></i>
+              <i
+                *ngIf="todo.category === 'Completed'"
+                class="fa-solid fa-circle-check fs-4"
+              ></i>
+            </button>
+            <label
+              class="form-check-label ms-2"
+              [ngStyle]="{
+                'text-decoration':
+                  todo.category === 'Completed' ? 'line-through' : 'none'
+              }"
+              >{{ todo.title }}</label
+            >
+
+            <button
+              *ngIf="todo.category === 'In-Progress'"
+              class="btn border-0 fill-close-btn float-end"
+              (click)="deleteTask(todo.id)"
+            >
+              <i class="fa-regular fa-circle-xmark fs-4 text-danger"></i>
+            </button>
+            <button
+              class="btn border-0 float-end px-0 py-0 pt-1"
+              *ngIf="todo.category === 'In-Progress'"
+              (click)="editTask(todo.id)"
+            >
+              <i class="fa-solid fa-pencil"></i>
+            </button>
+          </li>
+          <li
+            class="list-group-item border-0 d-flex"
+            *ngIf="
+              selectedCategory === 'In-Progress' || selectedCategory === 'All'
+            "
+          >
+            <button type="button" class="btn px-0" (click)="addTask()">
+              <i class="fa-solid fa-circle-plus fs-4 text-primary"></i>
+            </button>
+            <input
+              type="text"
+              placeholder="Create New Item"
+              class="border-0 form-control create-new-item-input"
+              name="itemName"
+              (keydown.enter)="addTask()"
+              [(ngModel)]="newTask"
+            />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

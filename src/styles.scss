@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+
+.container {
+  margin: 3rem 3rem 3rem 3rem;
+}
+
+.create-new-item-input {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid #ccc;
+  background-color: transparent;
+  color: #333;
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    border-color: #ccc;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    margin: 20px 0 0 0;
+  }
+}

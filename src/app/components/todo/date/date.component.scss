@@ -1,0 +1,87 @@
+$font-family_date: "Oswald", sans-serif;
+$color_month: white;
+
+.calendar-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.date-as-calendar {
+  border: 2px solid #3d82eb;
+  border-radius: 6px 6px 6px 6px;
+  .day {
+    text-align: center;
+    line-height: 1;
+  }
+  .month {
+    text-align: center;
+    line-height: 1;
+    font-family: $font-family_date;
+    text-transform: uppercase;
+    background: #3d82eb;
+    color: $color_month;
+  }
+}
+.position-pixels.date-as-calendar {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  .day {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1em;
+    top: 26px;
+    font-size: 24px;
+  }
+  .month {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1em;
+    top: 0px;
+    font-size: 12px;
+    padding: 2px 0;
+  }
+}
+.position-em.date-as-calendar {
+  display: inline-block;
+  position: relative;
+  width: 2.5em;
+  height: 2.5em;
+  .day {
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: 1.4em;
+    font-size: 14px;
+    color: #3d82eb;
+    font-weight: 700;
+  }
+  .month {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 1em;
+    top: 0px;
+    font-size: 10px;
+    padding: 3px 0 14px 0px;
+    font-weight: 700;
+  }
+}
+
+.today {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 21px;
+  color: #323232;
+}

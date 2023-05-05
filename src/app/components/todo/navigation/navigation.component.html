@@ -1,0 +1,35 @@
+<div class="float-end dropdown">
+  <button class="btn btn-light" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa-solid fa-ellipsis fs-4"></i>
+  </button>
+  <ul class="dropdown-menu">
+    <li>
+      <a
+        class="dropdown-item"
+        [ngClass]="{ 'text-primary': selectedCategory === 'Completed' }"
+        href="#"
+        (click)="onCategorySelected('Completed')"
+        >Completed</a
+      >
+    </li>
+    <li>
+      <a
+        class="dropdown-item"
+        [ngClass]="{ 'text-primary': selectedCategory === 'In-Progress' }"
+        href="#"
+        (click)="onCategorySelected('In-Progress')"
+        >In Progress</a
+      >
+    </li>
+    <li>
+      <a
+        class="dropdown-item"
+        [ngClass]="{ 'text-primary': selectedCategory === 'All' }"
+        href="#"
+        (click)="onCategorySelected('All')"
+        >All</a
+      >
+    </li>
+  </ul>
+</div>
+<div class="clearfix"></div>
