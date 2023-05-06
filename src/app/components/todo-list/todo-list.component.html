@@ -8,8 +8,16 @@
   <div class="row mt-5">
     <div class="col-12">
       <div class="card border-0">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item border-0" *ngFor="let todo of tasks">
+        <ul
+          class="list-group list-group-flush"
+          cdkDropList
+          (cdkDropListDropped)="onDrop($event)"
+        >
+          <li
+            class="list-group-item border-0"
+            *ngFor="let todo of tasks"
+            cdkDrag
+          >
             <button
               type="button"
               class="btn px-0 border-0"

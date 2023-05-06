@@ -1,9 +1,11 @@
 import { Task } from 'src/app/models/task';
 import { TodoService } from './../../services/todo.service';
-import { ChangeDetectorRef, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { v4 as uuidv4 } from 'uuid';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditTaskModalComponent } from '../edit-task-modal/edit-task-modal.component';
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
+
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
@@ -86,5 +88,9 @@ export class TodoListComponent {
         }
       });
     });
+  }
+
+  onDrop(event: CdkDragDrop<Task[]>) {
+    moveItemInArray(this.tasks, event.previousIndex, event.currentIndex);
   }
 }
