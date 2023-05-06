@@ -14,9 +14,6 @@ export class TodoService {
   //GET from http://localhost:3000/tasks ← list all todo items
   getTasks(category: string = 'In-Progress') {
     let url = `${this.apiUrl}?category=${category}`;
-    if (category === 'All') {
-      url = this.apiUrl;
-    }
     return this.http.get(url);
   }
 
@@ -26,7 +23,7 @@ export class TodoService {
     return this.http.get(url);
   }
 
-  //POST ← creates a new todo item (as long as it has an available id)
+  //POST ← creates a new todo item
   addTask(task: Task): Observable<Task> {
     return this.http.post<Task>(this.apiUrl, task);
   }

@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { EditTaskModalComponent } from './components/edit-task-modal/edit-task-modal.component';
 import { DateComponent } from './components/todo/date/date.component';
 import { NavigationComponent } from './components/todo/navigation/navigation.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NavigationComponent } from './components/todo/navigation/navigation.com
     EditTaskModalComponent,
     DateComponent,
     NavigationComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

@@ -1,33 +1,30 @@
 {
   "tasks": [
     {
-      "id": "2",
-      "title": "Workout for 30 minutes at the gym",
-      "category": "Completed"
-    },
-    {
-      "id": "3",
-      "title": "Clean the house and backyard",
-      "category": "In-Progress"
-    },
-    {
       "id": "3a06df",
       "title": "Buy groceries (milk, vegetables, fruits, fish)",
       "category": "In-Progress"
     },
     {
-      "id": "e91a8b",
-      "title": "Clean the house and backyard",
-      "category": "In-Progress"
-    },
-    {
       "id": "1bbb7a",
-      "title": "Take the car to the autoshop for an oil change",
+      "title": "Take the car to the Autoshop for an oil change",
       "category": "In-Progress"
     },
     {
       "id": "869845",
       "title": "Finish Up the Todo App",
+      "category": "Completed"
+    },
+    {
+      "id": "dbd8cd",
+      "title": "Workout for 30 minutes at the gym",
+      "completed": false,
+      "category": "In-Progress"
+    },
+    {
+      "id": "8dadb8",
+      "title": "Clean the house and backyard",
+      "completed": false,
       "category": "In-Progress"
     }
   ]

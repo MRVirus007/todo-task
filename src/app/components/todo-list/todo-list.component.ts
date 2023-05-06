@@ -1,6 +1,6 @@
 import { Task } from 'src/app/models/task';
 import { TodoService } from './../../services/todo.service';
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { v4 as uuidv4 } from 'uuid';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditTaskModalComponent } from '../edit-task-modal/edit-task-modal.component';
@@ -11,10 +11,9 @@ import { EditTaskModalComponent } from '../edit-task-modal/edit-task-modal.compo
 })
 export class TodoListComponent {
   tasks: Task[] = [];
-  //task: Task = {id: '',title: '',completed: false,category: '' };
   today;
   now = new Date();
-  newTask = '';
+  newTitle = '';
   selectedCategory: string = 'In-Progress';
   constructor(private todos: TodoService, private modalService: NgbModal) {
     this.today = {
@@ -36,17 +35,19 @@ export class TodoListComponent {
   }
 
   addTask() {
-    if (this.newTask.trim() !== '') {
+    if (this.newTitle.trim() !== '') {
+      //Generates new id with uuidv4
       const newId = uuidv4().substring(0, 6);
       const newTask = {
         id: newId,
-        title: this.newTask,
+        title: this.newTitle,
         completed: false,
         category: 'In-Progress',
       };
+      //POST ← creates a new todo item (with uuid)
       this.todos.addTask(newTask).subscribe((task) => {
         this.tasks.push(task);
-        this.newTask = '';
+        this.newTitle = '';
       });
     }
   }

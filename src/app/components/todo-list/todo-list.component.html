@@ -35,7 +35,7 @@
             >
 
             <button
-              *ngIf="todo.category === 'In-Progress'"
+              *ngIf="todo.category === 'Completed'"
               class="btn border-0 fill-close-btn float-end"
               (click)="deleteTask(todo.id)"
             >
@@ -51,12 +51,14 @@
           </li>
           <li
             class="list-group-item border-0 d-flex"
-            *ngIf="
-              selectedCategory === 'In-Progress' || selectedCategory === 'All'
-            "
+            *ngIf="selectedCategory === 'In-Progress'"
           >
-            <button type="button" class="btn px-0" (click)="addTask()">
-              <i class="fa-solid fa-circle-plus fs-4 text-primary"></i>
+            <button
+              type="button"
+              class="btn border-0 px-0 fill-close-btn"
+              (click)="addTask()"
+            >
+              <i class="fa-solid fa-plus text-primary"></i>
             </button>
             <input
               type="text"
@@ -64,7 +66,7 @@
               class="border-0 form-control create-new-item-input"
               name="itemName"
               (keydown.enter)="addTask()"
-              [(ngModel)]="newTask"
+              [(ngModel)]="newTitle"
             />
           </li>
         </ul>
