@@ -1,6 +1,3 @@
-.fill-close-btn .fa-regular:hover {
-  font-weight: 900;
-}
 .text-secondary-empty-circle {
   color: #cbcbcb;
   &:hover {
@@ -11,18 +8,6 @@
     border: 2px solid #cbcbcb;
     margin-bottom: 0.7vh;
     margin-left: 0.46vh;
-  }
-}
-
-.fa-pencil {
-  color: #198754;
-  border: 0.5vh solid #198754;
-  border-radius: 50%;
-  padding: 0.2vh;
-  &:hover,
-  &:active {
-    background: #198754;
-    color: #fff !important;
   }
 }
 

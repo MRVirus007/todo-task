@@ -2,11 +2,11 @@
   <h4 class="modal-title">Edit Task</h4>
   <button
     type="button"
-    class="btn btn-outline-dark rounded-circle"
+    class="btn border-0 fill-close-btn"
     aria-label="Close"
     (click)="modal.dismiss('Cross click')"
   >
-    <i class="fa-solid fa-xmark"></i>
+    <i class="fa-regular fa-circle-xmark fs-4 text-dark"></i>
   </button>
 </div>
 <div class="modal-body">
@@ -20,12 +20,10 @@
         name="title"
       />
       <button
-        type="button"
-        title="Save"
-        class="btn btn-outline-primary rounded-circle"
+        class="btn border-0 float-end px-0 py-0 pt-1"
         (click)="onSubmit(task)"
       >
-        <i class="fa-solid fa-pen-to-square"></i>
+        <i class="fa-solid fa-pen-to-square p-1"></i>
       </button>
     </div>
   </form>

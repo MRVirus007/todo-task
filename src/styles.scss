@@ -4,6 +4,7 @@
   margin: 3rem 3rem 3rem 3rem;
 }
 
+/* Create New Item and Edit Task Input */
 .create-new-item-input {
   border: none;
   border-radius: 0;
@@ -15,6 +16,30 @@
     box-shadow: none;
     border-color: #ccc;
   }
+}
+
+/* Todo List Edit and Edit Modal */
+.fa-pencil,
+.fa-pen-to-square {
+  color: #198754;
+  border: 0.5vh solid #198754;
+  border-radius: 50%;
+  padding: 0.2vh;
+  &:hover,
+  &:active {
+    background: #198754;
+    color: #fff !important;
+  }
+}
+
+/* Todo List Delete and Close Edit Modal Close */
+.fill-close-btn .fa-regular:hover {
+  font-weight: 900;
+}
+
+.modal-content {
+  border: none;
+  border-radius: unset;
 }
 
 @media (max-width: 800px) {

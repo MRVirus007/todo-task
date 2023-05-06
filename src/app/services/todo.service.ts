@@ -33,7 +33,6 @@ export class TodoService {
 
   //PATCH /1 ← edits the todo item with id = 1
   updateTask(task: Task): Observable<Task> {
-    console.log('task:::: ', task);
     const url = `${this.apiUrl}/${task.id}`;
     return this.http.patch<Task>(url, task);
   }

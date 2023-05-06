@@ -1,6 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TodoListComponent } from './todo-list.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { DateComponent } from '../todo/date/date.component';
+import { NavigationComponent } from '../todo/navigation/navigation.component';
+import { FormsModule } from '@angular/forms';
 
 describe('TodoListComponent', () => {
   let component: TodoListComponent;
@@ -8,9 +12,9 @@ describe('TodoListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TodoListComponent ]
-    })
-    .compileComponents();
+      declarations: [TodoListComponent, DateComponent, NavigationComponent],
+      imports: [HttpClientTestingModule, FormsModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TodoListComponent);
     component = fixture.componentInstance;
