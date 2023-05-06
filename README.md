@@ -19,8 +19,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Backend server
 
-1. cd to "/app/src/backend".
-2. Run `json-server --watch db.json`
+Run `json-server --watch db.json`
 
 ## Running unit tests
 
