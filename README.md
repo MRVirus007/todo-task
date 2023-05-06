@@ -10,7 +10,8 @@
 
 # Additional Feature
 
-Drag and Drop List
+1. Drag and Drop List
+2. Search Functionality
 
 ## Front-end Development server
 
@@ -26,4 +27,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 Specifically Written for TodoService
 
-## Designed and Developed by - Mohammed Rokerya
+## Designed and Developed by
+
+Mohammed Rokerya
+
+[LinkedIn](https://www.linkedin.com/in/mohammedrokerya/)
+[Blog](https://mrokerya.com/)
+[Notes App](https://play.google.com/store/apps/details?id=com.mrapp.notes)

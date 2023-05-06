@@ -5,7 +5,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { EditTaskModalComponent } from '../edit-task-modal/edit-task-modal.component';
 import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
-
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
@@ -17,6 +16,7 @@ export class TodoListComponent {
   now = new Date();
   newTitle = '';
   selectedCategory: string = 'In-Progress';
+  searchText: string = '';
   constructor(private todos: TodoService, private modalService: NgbModal) {
     this.today = {
       month: this.now.toLocaleString('en-US', { month: 'short' }),

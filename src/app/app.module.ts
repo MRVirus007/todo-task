@@ -1,3 +1,4 @@
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,7 +12,6 @@ import { EditTaskModalComponent } from './components/edit-task-modal/edit-task-m
 import { DateComponent } from './components/todo/date/date.component';
 import { NavigationComponent } from './components/todo/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +27,7 @@ import { FooterComponent } from './components/footer/footer.component';
     HttpClientModule,
     FormsModule,
     DragDropModule,
+    Ng2SearchPipeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
