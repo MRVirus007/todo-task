@@ -6,8 +6,12 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./date.component.scss'],
 })
 export class DateComponent {
-  @Input() today: { date: number; month: string } = {
-    date: 1,
-    month: 'January',
-  };
+  today;
+  now = new Date();
+  constructor() {
+    this.today = {
+      month: this.now.toLocaleString('en-US', { month: 'short' }),
+      date: this.now.getDate(),
+    };
+  }
 }

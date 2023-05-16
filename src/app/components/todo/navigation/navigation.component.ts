@@ -6,9 +6,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./navigation.component.scss'],
 })
 export class NavigationComponent {
-  @Input() selectedCategory: string = 'In-Progress';
+  selectedCategory: string = 'In-Progress';
   @Output() categorySelected = new EventEmitter<string>();
   onCategorySelected(category: string) {
     this.categorySelected.emit(category);
+    this.selectedCategory = category;
   }
 }

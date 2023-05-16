@@ -13,7 +13,7 @@
     {
       "id": "e91a8b",
       "title": "Clean the house and backyard",
-      "category": "In-Progress"
+      "category": "Completed"
     },
     {
       "id": "1bbb7a",
@@ -23,6 +23,18 @@
     {
       "id": "869845",
       "title": "Finish Up Todo App",
+      "category": "In-Progress"
+    },
+    {
+      "id": "7965fa",
+      "title": "Cancel spotify subscription",
+      "completed": false,
+      "category": "In-Progress"
+    },
+    {
+      "id": "55c81b",
+      "title": "Read Think Straight",
+      "completed": false,
       "category": "In-Progress"
     }
   ]
